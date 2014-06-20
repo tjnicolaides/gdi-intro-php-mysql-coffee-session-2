@@ -22,7 +22,7 @@
             </div>
     
             <div class="content">
-                <!--Enter PHP from slides 18-22 here-->
+
                 <?php 
                     include 'include/db.inc.php';
                     $sql='SELECT company_id, name, country, website FROM company ORDER BY name DESC'; 

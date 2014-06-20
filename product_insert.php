@@ -22,12 +22,12 @@
             </div>
     
             <div class="content">
-                <!--Enter form from slide 14 here-->
+
     
                 <form action="product_insert_result.php" method="get">
                     Company: <input type="text" name="company" /><br />
-                    <!--Insert PHP from slides 13 and 14-->
-                     Type: <input type="text" name="type" /><br />
+
+                    Type: <input type="text" name="type" /><br />
                     Roast: 
                         <input type="radio" name="roast" value="light" />Light 
                         <input type="radio" name="roast" value="medium" />Medium 

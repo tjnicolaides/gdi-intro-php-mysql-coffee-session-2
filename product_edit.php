@@ -23,11 +23,10 @@
     
             <div class="content">
                 <?php 
-                    /*Insert PHP from slides 6 and 7*/
+
     
                 ?>
                 
-                <!--Insert form from slides 8 and 9-->
                 
             </div>
     

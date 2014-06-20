@@ -22,7 +22,7 @@
             </div>
     
             <div class="content">
-                <!--Enter PHP from slides 18-22 here-->
+
                 <?php 
                     include 'include/db.inc.php';
                     $sql='SELECT product_id, company, type, roast, description  FROM product ORDER BY company DESC'; 
