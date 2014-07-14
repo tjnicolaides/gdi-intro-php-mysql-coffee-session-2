@@ -22,7 +22,11 @@
             </div>
     
             <div class="content">
-            
+                
+                <form action="search_result.php" method="get">
+                    <input type="text" name="keyword">
+                    <input type="submit" value="Search">
+                </form>
 
                 
             </div>

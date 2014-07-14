@@ -18,7 +18,7 @@
                 <a href="product_show.php" class="nav">Show Product</a>
                 <a href="product_insert.php" class="nav">Insert Product</a>
                 <a href="company_show.php" class="navcurr">Show Company</a>
-                <a href="company_insert.html" class="nav">Insert Company</a>
+                <a href="company_insert.php" class="nav">Insert Company</a>
             </div>
     
             <div class="content">

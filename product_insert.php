@@ -21,17 +21,42 @@
                 <a href="company_insert.html" class="nav">Insert Company</a>
             </div>
     
+
+            
             <div class="content">
-
-    
+        
                 <form action="product_insert_result.php" method="get">
-                    Company: <input type="text" name="company" /><br />
-
+                    Company: 
+                        <select name="company">
+                            <option value="">Choose a company!</option>
+                            
+                            <?php
+                
+                                include 'include/db.inc.php';
+                                $sql='SELECT company_id, name FROM company ORDER BY name';
+                                $result = mysqli_query($link, $sql);                        
+                                if (!$result) {                                     
+                                    $error = 'Error fetching data: ' . mysqli_error($link);                                 
+                                    echo $error; 
+                                    exit();             
+                                }
+                                
+                                while($recording=mysqli_fetch_array($result)){
+                                    $c_id=htmlspecialchars($recording['company_id'], ENT_QUOTES, 'UTF-8');                      
+                                    $c_name=htmlspecialchars($recording['name'], ENT_QUOTES, 'UTF-8');
+                                echo "<option value=$c_id>" . " ". $c_name. "</option>";        
+                            }
+                                
+                            ?>
+            
+            
+                        </select>
+                        <br />
                     Type: <input type="text" name="type" /><br />
-                    Roast: 
-                        <input type="radio" name="roast" value="light" />Light 
-                        <input type="radio" name="roast" value="medium" />Medium 
-                        <input type="radio" name="roast" value="dark" />Dark<br />
+                    Roast: <input type="radio" name="roast" value="light" />
+                        Light <input type="radio" name="roast" value="medium" />
+                        Medium <input type="radio" name="roast" value="dark" />
+                        Dark<br />
                     <textarea name="description" rows="10" cols="40"></textarea><br />
                     <input type="submit" value="Submit" />
                 </form>

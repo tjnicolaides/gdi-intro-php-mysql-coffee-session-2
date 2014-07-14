@@ -1,6 +1,6 @@
 <?php
     /*From slide 13*/
-    $link=mysqli_connect('localhost', 'root', 'root');
+    $link=mysqli_connect('localhost', 'root', 'mysql2012{}');
     
     if  (!$link) {
         $output='Unable to connect to the database';
